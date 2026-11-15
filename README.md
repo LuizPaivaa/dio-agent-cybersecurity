@@ -43,7 +43,9 @@ python -m unittest discover -s examples/sql-injection -p "test_*.py" -v
 
 O SQLite usa apenas memória e credenciais fictícias. Os testes verificam o comportamento vulnerável e a rejeição da entrada manipulada após a correção.
 
-**Limite:** executar testes de Python não comprova o comportamento da skill no Hermes. Uma conversa real no harness ainda precisa ser validada, portanto não incluí prints ou saídas que não obtive.
+**Validação do exemplo:** reproduzi os arquivos do laboratório em Python 3 e executei os três testes: login válido, senha incorreta e tentativa de SQL Injection. Todos passaram. O teste de injeção confirmou o comportamento inseguro no exemplo original e a rejeição na versão corrigida.
+
+**Limite:** isso valida apenas o código Python, não a skill no Hermes. Uma conversa real no harness ainda precisa ser feita; não incluí prints ou resultados dessa etapa sem executá-la.
 
 ---
 
